@@ -5,7 +5,7 @@ const createApp = (): Express => {
   const app = express();
 
   app.use(json());
-  app.use(router);
+  app.use("/api", router);
 
   return app;
 };
