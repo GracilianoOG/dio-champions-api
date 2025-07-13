@@ -1,5 +1,4 @@
-import express, { json, Express, Request, Response } from "express";
-import { getPlayer } from "./controllers/playerController";
+import express, { json, Express } from "express";
 import router from "./routes";
 
 const createApp = (): Express => {
