@@ -1,5 +1,6 @@
 import { PlayerModel } from "../models/playerModel";
 import {
+  deletePlayer,
   findAllPlayers,
   findPlayerById,
   insertPlayer,
@@ -33,4 +34,9 @@ export const postPlayerService = async (player: PlayerModel) => {
 
   await insertPlayer(player);
   return await CREATED();
+};
+
+export const deletePlayerService = async (id: number) => {
+  await deletePlayer(id);
+  return await OK({ message: "Deleted" });
 };
