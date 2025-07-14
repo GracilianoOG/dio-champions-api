@@ -2,8 +2,9 @@ import { PlayerModel } from "../models/playerModel";
 import {
   findAllPlayers,
   findPlayerById,
+  insertPlayer,
 } from "../repositories/playerRepository";
-import { BAD_REQUEST, NO_CONTENT, OK } from "../utils/httpHelper";
+import { BAD_REQUEST, CREATED, NO_CONTENT, OK } from "../utils/httpHelper";
 
 export const getAllPlayersService = async () => {
   const data = await findAllPlayers();
@@ -30,5 +31,6 @@ export const postPlayerService = async (player: PlayerModel) => {
     return BAD_REQUEST();
   }
 
-  return await OK(player);
+  await insertPlayer(player);
+  return await CREATED();
 };
