@@ -4,12 +4,15 @@ import {
   getAllPlayersController,
   getPlayerByIdController,
   postPlayerController,
+  updatePlayerStatisticsController,
 } from "./controllers/playerController";
 
 const router = Router();
 
 router.get("/players", getAllPlayersController);
 router.get("/players/:id", getPlayerByIdController);
+
+router.patch("/players/:id", updatePlayerStatisticsController);
 
 router.post("/players", postPlayerController);
 
