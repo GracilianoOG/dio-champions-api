@@ -39,7 +39,12 @@ export const postPlayerService = async (player: PlayerModel) => {
 };
 
 export const deletePlayerService = async (id: number) => {
-  await deletePlayer(id);
+  const hasDeleted = await deletePlayer(id);
+
+  if (!hasDeleted) {
+    return await BAD_REQUEST();
+  }
+
   return await OK({ message: "Deleted" });
 };
 
