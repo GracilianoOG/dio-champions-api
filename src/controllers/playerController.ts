@@ -4,7 +4,9 @@ import {
   getAllPlayersService,
   getPlayerByIdService,
   postPlayerService,
+  updatePlayerStatisticsService,
 } from "../services/playersService";
+import { PlayerStatisticsModel } from "../models/playerStatisticsModel";
 
 export const getAllPlayersController = async (req: Request, res: Response) => {
   const response = await getAllPlayersService();
@@ -28,6 +30,17 @@ export const postPlayerController = async (req: Request, res: Response) => {
 export const deletePlayerController = async (req: Request, res: Response) => {
   const id = parseInt(req.params.id);
   const response = await deletePlayerService(id);
+  const { statusCode, body } = response;
+  res.status(statusCode).json(body);
+};
+
+export const updatePlayerStatisticsController = async (
+  req: Request,
+  res: Response
+) => {
+  const id = parseInt(req.params.id);
+  const bodyValue: PlayerStatisticsModel = req.body;
+  const response = await updatePlayerStatisticsService(id, bodyValue);
   const { statusCode, body } = response;
   res.status(statusCode).json(body);
 };
