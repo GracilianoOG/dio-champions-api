@@ -16,3 +16,8 @@ export const getPlayerByIdController = async (req: Request, res: Response) => {
   const { statusCode, body } = response;
   res.status(statusCode).json(body);
 };
+
+export const postPlayerController = async (req: Request, res: Response) => {
+  const bodyValue = req.body;
+  console.log(bodyValue);
+};
