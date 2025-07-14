@@ -50,7 +50,10 @@ export const deletePlayer = async (id: number) => {
 
   if (index !== -1) {
     dataBase.splice(index, 1);
+    return true;
   }
+
+  return false;
 };
 
 export const updatePlayerStatistics = async (
