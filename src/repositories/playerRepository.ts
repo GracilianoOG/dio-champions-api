@@ -14,3 +14,7 @@ export const findPlayerById = async (
 ): Promise<PlayerModel | undefined> => {
   return dataBase.find(player => player.id === id);
 };
+
+export const insertPlayer = async (player: PlayerModel) => {
+  dataBase.push(player);
+};
