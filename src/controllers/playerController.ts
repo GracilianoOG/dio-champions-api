@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import {
   getAllPlayersService,
   getPlayerByIdService,
+  postPlayerService,
 } from "../services/playersService";
 
 export const getAllPlayersController = async (req: Request, res: Response) => {
@@ -18,6 +19,7 @@ export const getPlayerByIdController = async (req: Request, res: Response) => {
 };
 
 export const postPlayerController = async (req: Request, res: Response) => {
-  const bodyValue = req.body;
-  console.log(bodyValue);
+  const response = await postPlayerService(req.body);
+  const { statusCode, body } = response;
+  res.status(statusCode).json(body);
 };
