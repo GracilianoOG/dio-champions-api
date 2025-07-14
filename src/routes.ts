@@ -1,5 +1,6 @@
 import { Router } from "express";
 import {
+  deletePlayerController,
   getAllPlayersController,
   getPlayerByIdController,
   postPlayerController,
@@ -11,5 +12,7 @@ router.get("/players", getAllPlayersController);
 router.get("/players/:id", getPlayerByIdController);
 
 router.post("/players", postPlayerController);
+
+router.delete("/players/:id", deletePlayerController);
 
 export default router;
