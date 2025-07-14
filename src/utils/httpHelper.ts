@@ -7,6 +7,15 @@ export const OK = async (data: any): Promise<HttpResponse> => {
   };
 };
 
+export const CREATED = async (): Promise<HttpResponse> => {
+  return {
+    statusCode: 201,
+    body: {
+      message: "Successful",
+    },
+  };
+};
+
 export const NO_CONTENT = async (): Promise<HttpResponse> => {
   return {
     statusCode: 204,
