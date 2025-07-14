@@ -1,9 +1,11 @@
 import { PlayerModel } from "../models/playerModel";
+import { PlayerStatisticsModel } from "../models/playerStatisticsModel";
 import {
   deletePlayer,
   findAllPlayers,
   findPlayerById,
   insertPlayer,
+  updatePlayerStatistics,
 } from "../repositories/playerRepository";
 import { BAD_REQUEST, CREATED, NO_CONTENT, OK } from "../utils/httpHelper";
 
@@ -39,4 +41,13 @@ export const postPlayerService = async (player: PlayerModel) => {
 export const deletePlayerService = async (id: number) => {
   await deletePlayer(id);
   return await OK({ message: "Deleted" });
+};
+
+export const updatePlayerStatisticsService = async (
+  id: number,
+  statistics: PlayerStatisticsModel
+) => {
+  const data = await updatePlayerStatistics(id, statistics);
+  const response = await OK(data);
+  return response;
 };
