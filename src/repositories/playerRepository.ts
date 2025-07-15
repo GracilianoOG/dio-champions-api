@@ -5,6 +5,7 @@ const dataBase: PlayerModel[] = [
   {
     id: 1,
     name: "Lionel Messi",
+    club: "Inter Miami",
     statistics: {
       strength: 65,
       speed: 90,
@@ -14,6 +15,7 @@ const dataBase: PlayerModel[] = [
   {
     id: 2,
     name: "Cristiano Ronaldo",
+    club: "Al Nassr",
     statistics: {
       strength: 85,
       speed: 88,
@@ -23,6 +25,7 @@ const dataBase: PlayerModel[] = [
   {
     id: 3,
     name: "Kylian Mbappé",
+    club: "Paris Saint-Germain",
     statistics: {
       strength: 70,
       speed: 95,
