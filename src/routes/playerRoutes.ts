@@ -5,24 +5,14 @@ import {
   getPlayerByIdController,
   postPlayerController,
   updatePlayerStatisticsController,
-} from "./controllers/playerController";
-import {
-  getAllClubsController,
-  getClubByIdController,
-} from "./controllers/clubController";
+} from "../controllers/playerController";
 
 const router = Router();
 
 router.get("/players", getAllPlayersController);
-router.get("/players/:id", getPlayerByIdController);
-
-router.patch("/players/:id", updatePlayerStatisticsController);
-
 router.post("/players", postPlayerController);
-
+router.get("/players/:id", getPlayerByIdController);
+router.patch("/players/:id", updatePlayerStatisticsController);
 router.delete("/players/:id", deletePlayerController);
-
-router.get("/clubs", getAllClubsController);
-router.get("/clubs/:id", getClubByIdController);
 
 export default router;
