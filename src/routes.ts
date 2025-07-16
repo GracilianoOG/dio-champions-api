@@ -6,7 +6,10 @@ import {
   postPlayerController,
   updatePlayerStatisticsController,
 } from "./controllers/playerController";
-import { getAllClubsController } from "./controllers/clubController";
+import {
+  getAllClubsController,
+  getClubByIdController,
+} from "./controllers/clubController";
 
 const router = Router();
 
@@ -20,5 +23,6 @@ router.post("/players", postPlayerController);
 router.delete("/players/:id", deletePlayerController);
 
 router.get("/clubs", getAllClubsController);
+router.get("/clubs/:id", getClubByIdController);
 
 export default router;
