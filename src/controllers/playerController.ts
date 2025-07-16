@@ -5,7 +5,7 @@ import {
   getPlayerByIdService,
   postPlayerService,
   updatePlayerStatisticsService,
-} from "../services/playersService";
+} from "../services/playerService";
 import { PlayerStatisticsModel } from "../models/playerStatisticsModel";
 
 export const getAllPlayersController = async (req: Request, res: Response) => {
