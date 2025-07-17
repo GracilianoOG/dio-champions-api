@@ -1,38 +1,8 @@
+import { players } from "../data/players";
 import { PlayerModel } from "../models/playerModel";
 import { PlayerStatisticsModel } from "../models/playerStatisticsModel";
 
-const dataBase: PlayerModel[] = [
-  {
-    id: 1,
-    name: "Lionel Messi",
-    club: "Inter Miami",
-    statistics: {
-      strength: 65,
-      speed: 90,
-      technique: 95,
-    },
-  },
-  {
-    id: 2,
-    name: "Cristiano Ronaldo",
-    club: "Al Nassr",
-    statistics: {
-      strength: 85,
-      speed: 88,
-      technique: 88,
-    },
-  },
-  {
-    id: 3,
-    name: "Kylian Mbappé",
-    club: "Paris Saint-Germain",
-    statistics: {
-      strength: 70,
-      speed: 95,
-      technique: 80,
-    },
-  },
-];
+const dataBase: PlayerModel[] = players;
 
 export const findAllPlayers = async (): Promise<PlayerModel[]> => {
   return dataBase;
