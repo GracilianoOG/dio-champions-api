@@ -2,6 +2,7 @@ import { PlayerModel } from "../models/playerModel";
 import { PlayerStatisticsModel } from "../models/playerStatisticsModel";
 import {
   deletePlayer,
+  filterPlayersByClub,
   findAllPlayers,
   findPlayerById,
   insertPlayer,
@@ -53,6 +54,17 @@ export const updatePlayerStatisticsService = async (
   statistics: PlayerStatisticsModel
 ) => {
   const data = await updatePlayerStatistics(id, statistics);
+  const response = await OK(data);
+  return response;
+};
+
+export const getPlayersByClubService = async (club: string) => {
+  const data = await filterPlayersByClub(club);
+
+  if (!data) {
+    return await NO_CONTENT();
+  }
+
   const response = await OK(data);
   return response;
 };
