@@ -70,3 +70,7 @@ export const updatePlayerStatistics = async (
     return dataBase[playerIndex];
   }
 };
+
+export const filterPlayersByClub = async (club: string) => {
+  return dataBase.filter(player => player.club === club);
+};
