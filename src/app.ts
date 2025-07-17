@@ -5,11 +5,13 @@ import clubRouter from "./routes/clubRoutes";
 
 const createApp = (): Express => {
   const app = express();
+  const DEFAULT_PREFIX = "3333";
+  const API_PREFIX = process.env.API_PREFIX ?? DEFAULT_PREFIX;
 
   app.use(cors());
   app.use(json());
-  app.use("/api", playerRouter);
-  app.use("/api", clubRouter);
+  app.use(API_PREFIX, playerRouter);
+  app.use(API_PREFIX, clubRouter);
 
   return app;
 };
