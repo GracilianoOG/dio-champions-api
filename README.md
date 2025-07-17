@@ -68,13 +68,14 @@ npm run start:watch
 
 #### 📍 Rotas dos jogadores
 
-| Método | Endpoint           | Descrição                          |
-| ------ | ------------------ | ---------------------------------- |
-| GET    | `/api/players`     | Lista todos os players             |
-| GET    | `/api/players/:id` | Retorna player pelo ID             |
-| POST   | `/api/players`     | Cria um novo player                |
-| PATCH  | `/api/players/:id` | Atualiza estatísticas de um player |
-| DELETE | `/api/players/:id` | Remove um player pelo ID           |
+| Método | Endpoint                   | Descrição                             |
+| ------ | -------------------------- | ------------------------------------- |
+| GET    | `/api/players`             | Lista todos os players                |
+| GET    | `/api/players/:id`         | Retorna player pelo ID                |
+| GET    | `/api/players/clubs/:club` | Lista os players do club especificado |
+| POST   | `/api/players`             | Cria um novo player                   |
+| PATCH  | `/api/players/:id`         | Atualiza estatísticas de um player    |
+| DELETE | `/api/players/:id`         | Remove um player pelo ID              |
 
 #### 📍 Rotas dos clubes
 
