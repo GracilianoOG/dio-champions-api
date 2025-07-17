@@ -3,6 +3,7 @@ import {
   deletePlayerService,
   getAllPlayersService,
   getPlayerByIdService,
+  getPlayersByClubService,
   postPlayerService,
   updatePlayerStatisticsService,
 } from "../services/playerService";
@@ -17,6 +18,16 @@ export const getAllPlayersController = async (req: Request, res: Response) => {
 export const getPlayerByIdController = async (req: Request, res: Response) => {
   const id = parseInt(req.params.id);
   const response = await getPlayerByIdService(id);
+  const { statusCode, body } = response;
+  res.status(statusCode).json(body);
+};
+
+export const getPlayersByClubController = async (
+  req: Request,
+  res: Response
+) => {
+  const playerClub = req.params.club;
+  const response = await getPlayersByClubService(playerClub);
   const { statusCode, body } = response;
   res.status(statusCode).json(body);
 };
