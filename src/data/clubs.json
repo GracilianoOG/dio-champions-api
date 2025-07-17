@@ -10,5 +10,53 @@
   {
     "id": 3,
     "name": "Paris Saint-Germain"
+  },
+  {
+    "id": 4,
+    "name": "Liverpool"
+  },
+  {
+    "id": 5,
+    "name": "Manchester City"
+  },
+  {
+    "id": 6,
+    "name": "Al-Hilal"
+  },
+  {
+    "id": 7,
+    "name": "Barcelona"
+  },
+  {
+    "id": 8,
+    "name": "Bayern de Munique"
+  },
+  {
+    "id": 9,
+    "name": "Real Madrid"
+  },
+  {
+    "id": 10,
+    "name": "Atlético de Madrid"
+  },
+  {
+    "id": 11,
+    "name": "Chelsea"
+  },
+  {
+    "id": 12,
+    "name": "Manchester United"
+  },
+  {
+    "id": 13,
+    "name": "Al Hilal"
+  },
+  {
+    "id": 14,
+    "name": "Aston Villa"
+  },
+  {
+    "id": 15,
+    "name": "Borussia M'Gladbach"
   }
 ]
