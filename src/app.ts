@@ -5,7 +5,7 @@ import clubRouter from "./routes/clubRoutes";
 
 const createApp = (): Express => {
   const app = express();
-  const DEFAULT_PREFIX = "3333";
+  const DEFAULT_PREFIX = "/api";
   const API_PREFIX = process.env.API_PREFIX ?? DEFAULT_PREFIX;
 
   app.use(cors());
