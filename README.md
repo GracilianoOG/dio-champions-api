@@ -45,7 +45,7 @@ npm run start:watch
 | `dist`        | `tsup src`                                | Gera os arquivos compilados da aplicação a partir do diretório `src`.   |
 | `start:dev`   | `tsx --env-file=.env src/server.ts`       | Inicia o servidor em modo de desenvolvimento com variáveis de ambiente. |
 | `start:watch` | `tsx watch --env-file=.env src/server.ts` | Inicia o servidor em modo "watch" (reinicia ao salvar arquivos).        |
-| `start:dist`  | `npm run dist && node dist/src/index.js`  | Compila o projeto e executa o build gerado na pasta `dist`.             |
+| `start:dist`  | `npm run dist && node dist/server.js`     | Compila o projeto e executa o build gerado na pasta `dist`.             |
 
 ## 📒 Documentação
 
